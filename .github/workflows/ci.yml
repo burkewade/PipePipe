@@ -9,7 +9,6 @@ on:
       - 'README.md'
       - 'fastlane/**'
       - 'assets/**'
-      - '.github/**'
   push:
     branches:
       - main
@@ -17,7 +16,6 @@ on:
       - 'README.md'
       - 'fastlane/**'
       - 'assets/**'
-      - '.github/**'
 
 jobs:
   build-client:
