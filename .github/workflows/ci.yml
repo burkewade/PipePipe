@@ -23,6 +23,11 @@ jobs:
     outputs:
       files: ${{ steps.step-output.outputs.files }}
     steps:
+      -name: Checkout repository
+       run: |
+         git clone --depth=1 https://github.com/burkewade/PipePipeClient.git
+         git clone --depth=1 https://github.com/InfinityLoop1308/PipePipeExtractor.git
+
       - uses: actions/checkout@v3
 
       - name: Set up JDK 11
@@ -34,8 +39,6 @@ jobs:
 
       - name: Build release APK
         run: |
-          git clone --depth=1 https://github.com/burkewade/PipePipeClient.git
-          git clone --depth=1 https://github.com/InfinityLoop1308/PipePipeExtractor.git
           cd PipePipeClient
           ./gradlew assembleRelease -DskipFormatKtlint 
 
