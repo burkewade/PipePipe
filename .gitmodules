@@ -1,11 +1,3 @@
-[submodule "NewPipeExtractor"]
-	path = PipePipeExtractor
-	url = https://codeberg.org/NullPointerException/PipePipeExtractor.git
-	branch = main
-[submodule "NewPipeEnhanced-client"]
-	path = PipePipeClient
-	url = https://codeberg.org/NullPointerException/PipePipeClient.git
-	branch = dev
 [submodule "PipePipeClient"]
 	path = PipePipeClient
 	url = https://github.com/burkewade/PipePipeClient.git
