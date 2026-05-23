@@ -26,10 +26,6 @@ jobs:
       files: ${{ steps.step-output.outputs.files }}
     steps:
       - uses: actions/checkout@v3
-        with:
-          submodules: recursive
-
-      - uses: gradle/wrapper-validation-action@v1
 
       - name: Create and checkout branch
         # push events already checked out the branch
@@ -47,6 +43,8 @@ jobs:
 
       - name: Build debug APK
         run: |
+          git clone --depth=1 https://github.com/burkewade/PipePipeClient.git
+          git clone --depth=1 https://github.com/InfinityLoop1308/PipePipeExtractor.git
           cd PipePipeClient
           ./gradlew assembleRelease -DskipFormatKtlint 
 
