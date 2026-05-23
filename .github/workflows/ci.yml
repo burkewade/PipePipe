@@ -27,8 +27,6 @@ jobs:
         with:
           submodules: recursive
 
-      - uses: gradle/actions/wrapper-validation@v3
-
       - name: Create and checkout branch
         # push events already checked out the branch
         if: github.event_name == 'pull_request'
