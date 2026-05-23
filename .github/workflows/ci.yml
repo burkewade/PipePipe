@@ -29,7 +29,7 @@ jobs:
         with:
           submodules: recursive
 
-      - uses: gradle/wrapper-validation-action@v1
+      - uses: gradle/actions/wrapper-validation@v3
 
       - name: Create and checkout branch
         # push events already checked out the branch
