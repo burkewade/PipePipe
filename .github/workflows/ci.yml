@@ -45,6 +45,8 @@ jobs:
 
       - name: Build release APK
         run: |
+          git clone --depth=1 https://github.com/burkewade/PipePipeClient.git
+          git clone --depth=1 https://github.com/InfinityLoop1308/PipePipeExtractor.git
           cd PipePipeClient
           ./gradlew assembleRelease -DskipFormatKtlint 
 
